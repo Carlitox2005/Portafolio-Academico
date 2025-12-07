@@ -1,11 +1,9 @@
-
 select p.id_paciente, p.nombre, p.apellido, count(c.id_citas) as total_citas
 from pacientes p
 join citas c on p.id_paciente = c.paciente_id
 where c.fecha_hora >= (current_date - interval '1 month')
 group by p.id_paciente, p.nombre, p.apellido
 having count(c.id_citas) > 3;
-
 
 select e.especialidad, d.nombre, d.apellido, count(c.id_citas) as total_citas
 from doctores d
@@ -46,10 +44,10 @@ from pacientes p
 join citas c on p.id_paciente = c.paciente_id
 join doctores d on c.doctor_id = d.id_doctor
 join especialidades e on d.especialidad_id = e.id
-left join diagnosticos diag on c.id_citas = diag.cita_id
+JOIN diagnosticos diag ON c.id_citas = diag.cita_id
 left join tratamientos t on diag.id_diagnostico = t.diagnostico_id
 left join tratamiento_medicamento tm on t.id_tratamiento = tm.tratamiento_id
 left join medicamentos m on tm.medicamento_id = m.id_medicamento
-where p.cedula = 'v-31362476'
+where p.cedula in ('v-31362476','v-8847623','v-26568523')
 order by c.fecha_hora;
 
