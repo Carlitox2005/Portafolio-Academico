@@ -12,10 +12,10 @@ insert into doctores (nombre, apellido, telefono, cedula, email, activo, especia
 ('carlos','pérez','04121234570','v-45678901','carlos.perez@hospital.com',false,4,'2018-11-20');
 
 insert into pacientes (cedula, nombre, apellido, genero, fecha_nacimiento, email, telefono, direccion, estado) values
-('v-11111111','jose','gonzález','m','1985-02-14','jose.gonzalez@mail.com','04141234567','av. principal #123','activo'),
-('v-22222222','marta','fernández','f','1990-06-30','marta.fernandez@mail.com','04141234568','calle los cedros','activo'),
-('v-33333333','pedro','ramírez','m','1975-09-20','pedro.ramirez@mail.com','04141234569','urb. el centro','inactivo'),
-('v-44444444','lucía','torres','f','2000-01-05','lucia.torres@mail.com','04141234570','sector la esperanza','activo');
+('v-31362476','jose','gonzález','m','1985-02-14','jose.gonzalez@mail.com','04141234567','av. principal #123','activo'),
+('v-8847623','marta','fernández','f','1990-06-30','marta.fernandez@mail.com','04141234568','calle los cedros','activo'),
+('v-14881132','pedro','ramírez','m','1975-09-20','pedro.ramirez@mail.com','04141234569','urb. el centro','inactivo'),
+('v-26568523','lucía','torres','f','2000-01-05','lucia.torres@mail.com','04141234570','sector la esperanza','activo');
 
 insert into habitaciones (codigo_habitacion, tipo, piso, estado) values
 ('h101','individual',1,'operativa'),
@@ -67,4 +67,5 @@ insert into citas (paciente_id, doctor_id, fecha_hora, estado, motivo, habitacio
 (1,1,'2025-12-15 09:00:00','confirmada','seguimiento hipertensión',1,1),
 (1,1,'2025-12-20 09:00:00','programada','ajuste de tratamiento',1,1),
 (1,1,'2025-12-25 09:00:00','programada','chequeo general',1,1);
+
 
