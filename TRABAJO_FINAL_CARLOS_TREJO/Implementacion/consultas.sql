@@ -50,5 +50,6 @@ left join diagnosticos diag on c.id_citas = diag.cita_id
 left join tratamientos t on diag.id_diagnostico = t.diagnostico_id
 left join tratamiento_medicamento tm on t.id_tratamiento = tm.tratamiento_id
 left join medicamentos m on tm.medicamento_id = m.id_medicamento
-where p.cedula = 'v-11111111'
+where p.cedula = 'v-31362476'
 order by c.fecha_hora;
+
