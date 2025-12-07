@@ -1,5 +1,3 @@
-
-
 create table especialidades(
 id serial primary key,
 especialidad varchar (60) not null,
@@ -38,7 +36,7 @@ id_paciente serial primary key,
 cedula varchar(20) not null unique,
 nombre varchar(80) not null,
 apellido varchar(80) not null,
-genero char(1) not null check 'm','f',
+genero char(1), 
 fecha_nacimiento date not null,
 email varchar(100),
 telefono varchar(20),
