@@ -1,4 +1,3 @@
-
 insert into especialidades (especialidad, descripcion, estado) values
 ('cardiología','tratamiento del sistema cardiovascular','activa'),
 ('pediatría','atención de niños y adolescentes','activa'),
@@ -33,7 +32,11 @@ insert into citas (paciente_id, doctor_id, fecha_hora, estado, motivo, habitacio
 (1,1,'2025-12-10 09:00:00','programada','control de hipertensión',1,1),
 (2,2,'2025-12-11 10:30:00','confirmada','consulta pediátrica',2,3),
 (3,3,'2025-12-12 14:00:00','cancelada','evaluación neurológica',null,null),
-(4,1,'2025-12-13 08:00:00','programada','chequeo general',1,2);
+(4,1,'2025-12-13 08:00:00','programada','chequeo general',1,2),
+(1,1,'2025-12-02 09:00:00','programada','control de presión',1,1),
+(1,1,'2025-12-15 09:00:00','confirmada','seguimiento hipertensión',1,1),
+(1,1,'2025-12-20 09:00:00','programada','ajuste de tratamiento',1,1),
+(1,1,'2025-12-25 09:00:00','programada','chequeo general',1,1);
 
 insert into diagnosticos (cita_id, codigo_cie10, descripcion, gravedad) values
 (1,'i10','hipertensión esencial','moderada'),
@@ -49,23 +52,13 @@ insert into medicamentos (nombre, presentacion, unidad, stock_actual, stock_mini
 ('enalapril','tabletas','mg',100,20,5.50,true),
 ('salbutamol','inhalador','ml',50,10,12.00,true),
 ('insulina','ampollas','ml',200,50,25.00,true),
-('paracetamol','tabletas','mg',500,100,2.00,true);
+('paracetamol','tabletas','mg',500,100,2.00,true)
+('omeprazol','capsulas','mg',5,20,8.00,true),
+('amoxicilina','tabletas','mg',2,15,3.50,true),
+('ibuprofeno','tabletas','mg',0,10,4.00,true);
 
 insert into tratamiento_medicamento (tratamiento_id, medicamento_id, dosis, frecuencia, duracion_dias) values
 (1,1,10,'cada 12h',30),
 (2,2,2,'cada 8h',15),
 (3,3,20,'cada 24h',60);
-
-
-insert into medicamentos (nombre, presentacion, unidad, stock_actual, stock_minimo, precio, activo) values
-('omeprazol','capsulas','mg',5,20,8.00,true),
-('amoxicilina','tabletas','mg',2,15,3.50,true),
-('ibuprofeno','tabletas','mg',0,10,4.00,true);
-
-insert into citas (paciente_id, doctor_id, fecha_hora, estado, motivo, habitacion_id, cama_id) values
-(1,1,'2025-12-02 09:00:00','programada','control de presión',1,1),
-(1,1,'2025-12-15 09:00:00','confirmada','seguimiento hipertensión',1,1),
-(1,1,'2025-12-20 09:00:00','programada','ajuste de tratamiento',1,1),
-(1,1,'2025-12-25 09:00:00','programada','chequeo general',1,1);
-
 
