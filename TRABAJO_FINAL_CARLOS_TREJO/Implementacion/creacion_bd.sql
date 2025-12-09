@@ -142,3 +142,4 @@ constraint check_tm_dosis check (dosis > 0),
 constraint check_tm_duracion check (duracion_dias > 0 and duracion_dias <= 365),
 constraint check_tm_frecuencia check (char_length(frecuencia) >= 3)
 );
+
