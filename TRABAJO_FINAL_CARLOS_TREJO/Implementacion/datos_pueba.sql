@@ -52,7 +52,7 @@ insert into medicamentos (nombre, presentacion, unidad, stock_actual, stock_mini
 ('enalapril','tabletas','mg',100,20,5.50,true),
 ('salbutamol','inhalador','ml',50,10,12.00,true),
 ('insulina','ampollas','ml',200,50,25.00,true),
-('paracetamol','tabletas','mg',500,100,2.00,true)
+('paracetamol','tabletas','mg',500,100,2.00,true),
 ('omeprazol','capsulas','mg',5,20,8.00,true),
 ('amoxicilina','tabletas','mg',2,15,3.50,true),
 ('ibuprofeno','tabletas','mg',0,10,4.00,true);
@@ -61,4 +61,5 @@ insert into tratamiento_medicamento (tratamiento_id, medicamento_id, dosis, frec
 (1,1,10,'cada 12h',30),
 (2,2,2,'cada 8h',15),
 (3,3,20,'cada 24h',60);
+
 
